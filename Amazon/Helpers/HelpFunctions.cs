@@ -1,15 +1,16 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Amazon.Helpers
 {
-    class HelpFunctions
+    class HelpFunctions : ConvertVariables
     {        
-        public static decimal Transform(string text)
+        public override decimal StringToInt(string text)
         {
             NumberStyles style;
             CultureInfo culture;
@@ -26,6 +27,16 @@ namespace Amazon.Helpers
                 Assert.Fail("No price was found");
             }
             return result;
+        }
+
+        //Database connection
+        private void DBOpen(string connectionvalue)
+        {
+            string connetionString;
+            SqlConnection cnn;
+            connetionString = connectionvalue;
+            cnn = new SqlConnection(connetionString);
+            cnn.Open();
         }
     }
 }
