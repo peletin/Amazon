@@ -1,11 +1,7 @@
 # Amazon search
-Challenge, Please add valid credentials for amazon under Data.Json
+NOTE **Please add valid credentials for amazon under Data.Json, it is needed to complete the last steps
 
-Missing Aceptance Criteria:
-•	Have an interface implemented
-•	Have an abstract class implemented
-•	Implement a report using extend reports or a custom one
-•	Create a reusable method for DB Connection
+Have things that can be organized better using pagefactory after all this time took the toll as needed investigate few things as well general configuration is not optimal, but im having a hard time with time, curretnly on release and need to leave everything in order in my previous work before friday.
 
-Will try to add them before due time
+Any question please contact me. 
 
